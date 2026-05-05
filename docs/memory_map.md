@@ -22,7 +22,7 @@ The first word in the vector table is `_stack_top`, so the Cortex-M3 starts with
 | Peripheral | Base address | Notes |
 | --- | --- | --- |
 | UART0 | `0x40004000` | CMSDK-style UART used for QEMU terminal I/O |
-| GPIO0 | `0x40010000` | CMSDK-style GPIO assumption for the mps2-an385 machine |
+| GPIO0 | `0x40010000` | CCMSDK-style GPIO address used by this project; mainly used for the blink demo |
 | SysTick | `0xE000E010` | Cortex-M system timer in the private peripheral space |
 
 ## Linker Sections

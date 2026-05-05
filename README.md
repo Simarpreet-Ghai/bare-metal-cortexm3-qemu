@@ -13,7 +13,7 @@ The project stays close to a beginner-friendly embedded firmware layout: startup
 - Provides a small GPIO HAL for a `blink` shell command
 - Includes a tiny UART-backed `printf`
 - Runs a simple UART command shell
-- Generates map, size, and disassembly files for portfolio proof
+- Generates map, size, and disassembly files as project results
 
 ## Why This Matters
 
@@ -172,9 +172,3 @@ Interactive shell ready. Type 'help'.
 - Add UART interrupt-driven RX with a ring buffer.
 - Add unit-style host tests for parsing helpers.
 - Add a small GDB walkthrough in `docs/`.
-
-## Resume Bullets
-
-- Built a bare-metal ARM Cortex-M3 firmware project for QEMU `mps2-an385` using startup assembly, linker script, and freestanding C.
-- Implemented CMSDK-style UART, SysTick timer interrupt, GPIO HAL, tiny printf, and UART command shell.
-- Generated firmware map, size report, and disassembly artifacts for embedded debugging and portfolio proof.
