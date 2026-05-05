@@ -1,0 +1,15 @@
+# macOS
+.DS_Store
+
+# build outputs
+*.o
+*.elf
+*.bin
+*.map
+
+# temporary logs
+*.log
+
+# Python/cache
+__pycache__/
+*.pyc
