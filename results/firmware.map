@@ -1,0 +1,192 @@
+
+There are no discarded input sections
+
+Memory Configuration
+
+Name             Origin             Length             Attributes
+FLASH            0x00000000         0x00080000         xr
+SRAM             0x20000000         0x00008000         xrw
+*default*        0x00000000         0xffffffff
+
+Linker script and memory map
+
+LOAD /var/folders/fl/1cf7cws12wxbynxcdlg3dkv80000gn/T//ccSVdeat.o
+LOAD /var/folders/fl/1cf7cws12wxbynxcdlg3dkv80000gn/T//ccm81kvX.o
+LOAD /var/folders/fl/1cf7cws12wxbynxcdlg3dkv80000gn/T//cchiK2ns.o
+LOAD /var/folders/fl/1cf7cws12wxbynxcdlg3dkv80000gn/T//ccpryMr7.o
+LOAD /var/folders/fl/1cf7cws12wxbynxcdlg3dkv80000gn/T//ccZZuBCA.o
+LOAD /var/folders/fl/1cf7cws12wxbynxcdlg3dkv80000gn/T//ccEbHjq2.o
+LOAD /Applications/ArmGNUToolchain/15.2.rel1/arm-none-eabi/bin/../lib/gcc/arm-none-eabi/15.2.1/thumb/v7-m/nofp/libgcc.a
+
+.text           0x00000000      0xdc7
+ *(.vectors)
+ .vectors       0x00000000       0x80 /var/folders/fl/1cf7cws12wxbynxcdlg3dkv80000gn/T//ccSVdeat.o
+                0x00000040                Reset_Handler
+ *(.text*)
+ .text          0x00000080        0x0 /var/folders/fl/1cf7cws12wxbynxcdlg3dkv80000gn/T//ccSVdeat.o
+ .text.Default_Handler
+                0x00000080        0x4 /var/folders/fl/1cf7cws12wxbynxcdlg3dkv80000gn/T//ccSVdeat.o
+                0x00000080                Default_Handler
+ .text          0x00000084      0x5b0 /var/folders/fl/1cf7cws12wxbynxcdlg3dkv80000gn/T//ccm81kvX.o
+                0x000005b4                main
+ .text          0x00000634       0xc8 /var/folders/fl/1cf7cws12wxbynxcdlg3dkv80000gn/T//cchiK2ns.o
+                0x00000634                uart_init
+                0x00000668                uart_putchar
+                0x00000698                uart_puts
+                0x000006c2                uart_has_data
+                0x000006e0                uart_getchar
+ .text          0x000006fc       0xa0 /var/folders/fl/1cf7cws12wxbynxcdlg3dkv80000gn/T//ccpryMr7.o
+                0x000006fc                systick_init
+                0x00000740                SysTick_Handler
+                0x0000075c                get_tick_ms
+                0x00000770                delay_ms
+ .text          0x0000079c       0x9c /var/folders/fl/1cf7cws12wxbynxcdlg3dkv80000gn/T//ccZZuBCA.o
+                0x0000079c                gpio_init
+                0x000007cc                gpio_write
+                0x000007f4                gpio_read
+                0x00000808                gpio_toggle
+ .text          0x00000838      0x1d0 /var/folders/fl/1cf7cws12wxbynxcdlg3dkv80000gn/T//ccEbHjq2.o
+                0x000008fc                printf
+ *(.rodata*)
+ .rodata        0x00000a08      0x3a3 /var/folders/fl/1cf7cws12wxbynxcdlg3dkv80000gn/T//ccm81kvX.o
+ *fill*         0x00000dab        0x1 
+ .rodata        0x00000dac       0x1b /var/folders/fl/1cf7cws12wxbynxcdlg3dkv80000gn/T//ccEbHjq2.o
+                [0x00000000]                      _data_load = LOADADDR (.data)
+
+.glue_7         0x00000dc8        0x0
+ .glue_7        0x00000dc8        0x0 linker stubs
+
+.glue_7t        0x00000dc8        0x0
+ .glue_7t       0x00000dc8        0x0 linker stubs
+
+.vfp11_veneer   0x00000dc8        0x0
+ .vfp11_veneer  0x00000dc8        0x0 linker stubs
+
+.v4_bx          0x00000dc8        0x0
+ .v4_bx         0x00000dc8        0x0 linker stubs
+
+.iplt           0x00000dc8        0x0
+ .iplt          0x00000dc8        0x0 /var/folders/fl/1cf7cws12wxbynxcdlg3dkv80000gn/T//ccSVdeat.o
+
+.rel.dyn        0x00000dc8        0x0
+ .rel.iplt      0x00000dc8        0x0 /var/folders/fl/1cf7cws12wxbynxcdlg3dkv80000gn/T//ccSVdeat.o
+
+.data           0x20000000        0x0 load address 0x00000000
+                0x20000000                        _data_start = .
+ *(.data*)
+ .data          0x20000000        0x0 /var/folders/fl/1cf7cws12wxbynxcdlg3dkv80000gn/T//ccSVdeat.o
+ .data          0x20000000        0x0 /var/folders/fl/1cf7cws12wxbynxcdlg3dkv80000gn/T//ccm81kvX.o
+ .data          0x20000000        0x0 /var/folders/fl/1cf7cws12wxbynxcdlg3dkv80000gn/T//cchiK2ns.o
+ .data          0x20000000        0x0 /var/folders/fl/1cf7cws12wxbynxcdlg3dkv80000gn/T//ccpryMr7.o
+ .data          0x20000000        0x0 /var/folders/fl/1cf7cws12wxbynxcdlg3dkv80000gn/T//ccZZuBCA.o
+ .data          0x20000000        0x0 /var/folders/fl/1cf7cws12wxbynxcdlg3dkv80000gn/T//ccEbHjq2.o
+                0x20000000                        _data_end = .
+
+.igot.plt       0x20000000        0x0 load address 0x00000000
+ .igot.plt      0x20000000        0x0 /var/folders/fl/1cf7cws12wxbynxcdlg3dkv80000gn/T//ccSVdeat.o
+
+.bss            0x20000000        0x8 load address 0x00000000
+                0x20000000                        _bss_start = .
+ *(.bss*)
+ .bss           0x20000000        0x0 /var/folders/fl/1cf7cws12wxbynxcdlg3dkv80000gn/T//ccSVdeat.o
+ .bss           0x20000000        0x0 /var/folders/fl/1cf7cws12wxbynxcdlg3dkv80000gn/T//ccm81kvX.o
+ .bss           0x20000000        0x0 /var/folders/fl/1cf7cws12wxbynxcdlg3dkv80000gn/T//cchiK2ns.o
+ .bss           0x20000000        0x4 /var/folders/fl/1cf7cws12wxbynxcdlg3dkv80000gn/T//ccpryMr7.o
+ .bss           0x20000004        0x4 /var/folders/fl/1cf7cws12wxbynxcdlg3dkv80000gn/T//ccZZuBCA.o
+ .bss           0x20000008        0x0 /var/folders/fl/1cf7cws12wxbynxcdlg3dkv80000gn/T//ccEbHjq2.o
+ *(COMMON)
+                0x20000008                        _bss_end = .
+                0x20008000                        _stack_top = (ORIGIN (SRAM) + LENGTH (SRAM))
+OUTPUT(firmware.elf elf32-littlearm)
+LOAD linker stubs
+
+.ARM.attributes
+                0x00000000       0x2f
+ .ARM.attributes
+                0x00000000       0x21 /var/folders/fl/1cf7cws12wxbynxcdlg3dkv80000gn/T//ccSVdeat.o
+ .ARM.attributes
+                0x00000021       0x2d /var/folders/fl/1cf7cws12wxbynxcdlg3dkv80000gn/T//ccm81kvX.o
+ .ARM.attributes
+                0x0000004e       0x2d /var/folders/fl/1cf7cws12wxbynxcdlg3dkv80000gn/T//cchiK2ns.o
+ .ARM.attributes
+                0x0000007b       0x2d /var/folders/fl/1cf7cws12wxbynxcdlg3dkv80000gn/T//ccpryMr7.o
+ .ARM.attributes
+                0x000000a8       0x2d /var/folders/fl/1cf7cws12wxbynxcdlg3dkv80000gn/T//ccZZuBCA.o
+ .ARM.attributes
+                0x000000d5       0x2d /var/folders/fl/1cf7cws12wxbynxcdlg3dkv80000gn/T//ccEbHjq2.o
+
+.comment        0x00000000       0x45
+ .comment       0x00000000       0x45 /var/folders/fl/1cf7cws12wxbynxcdlg3dkv80000gn/T//ccm81kvX.o
+                                 0x46 (size before relaxing)
+ .comment       0x00000045        0x0 /var/folders/fl/1cf7cws12wxbynxcdlg3dkv80000gn/T//cchiK2ns.o
+                                 0x46 (size before relaxing)
+ .comment       0x00000045        0x0 /var/folders/fl/1cf7cws12wxbynxcdlg3dkv80000gn/T//ccpryMr7.o
+                                 0x46 (size before relaxing)
+ .comment       0x00000045        0x0 /var/folders/fl/1cf7cws12wxbynxcdlg3dkv80000gn/T//ccZZuBCA.o
+                                 0x46 (size before relaxing)
+ .comment       0x00000045        0x0 /var/folders/fl/1cf7cws12wxbynxcdlg3dkv80000gn/T//ccEbHjq2.o
+                                 0x46 (size before relaxing)
+
+.debug_line     0x00000000      0x8c8
+ .debug_line    0x00000000       0x49 /var/folders/fl/1cf7cws12wxbynxcdlg3dkv80000gn/T//ccSVdeat.o
+ .debug_line    0x00000049      0x3e6 /var/folders/fl/1cf7cws12wxbynxcdlg3dkv80000gn/T//ccm81kvX.o
+ .debug_line    0x0000042f      0x12e /var/folders/fl/1cf7cws12wxbynxcdlg3dkv80000gn/T//cchiK2ns.o
+ .debug_line    0x0000055d      0x101 /var/folders/fl/1cf7cws12wxbynxcdlg3dkv80000gn/T//ccpryMr7.o
+ .debug_line    0x0000065e       0xe4 /var/folders/fl/1cf7cws12wxbynxcdlg3dkv80000gn/T//ccZZuBCA.o
+ .debug_line    0x00000742      0x186 /var/folders/fl/1cf7cws12wxbynxcdlg3dkv80000gn/T//ccEbHjq2.o
+
+.debug_line_str
+                0x00000000       0x38
+ .debug_line_str
+                0x00000000       0x38 /var/folders/fl/1cf7cws12wxbynxcdlg3dkv80000gn/T//ccSVdeat.o
+
+.debug_info     0x00000000      0x95b
+ .debug_info    0x00000000       0x24 /var/folders/fl/1cf7cws12wxbynxcdlg3dkv80000gn/T//ccSVdeat.o
+ .debug_info    0x00000024      0x410 /var/folders/fl/1cf7cws12wxbynxcdlg3dkv80000gn/T//ccm81kvX.o
+ .debug_info    0x00000434      0x133 /var/folders/fl/1cf7cws12wxbynxcdlg3dkv80000gn/T//cchiK2ns.o
+ .debug_info    0x00000567      0x111 /var/folders/fl/1cf7cws12wxbynxcdlg3dkv80000gn/T//ccpryMr7.o
+ .debug_info    0x00000678       0xfe /var/folders/fl/1cf7cws12wxbynxcdlg3dkv80000gn/T//ccZZuBCA.o
+ .debug_info    0x00000776      0x1e5 /var/folders/fl/1cf7cws12wxbynxcdlg3dkv80000gn/T//ccEbHjq2.o
+
+.debug_abbrev   0x00000000      0x5a8
+ .debug_abbrev  0x00000000       0x14 /var/folders/fl/1cf7cws12wxbynxcdlg3dkv80000gn/T//ccSVdeat.o
+ .debug_abbrev  0x00000014      0x1c2 /var/folders/fl/1cf7cws12wxbynxcdlg3dkv80000gn/T//ccm81kvX.o
+ .debug_abbrev  0x000001d6      0x108 /var/folders/fl/1cf7cws12wxbynxcdlg3dkv80000gn/T//cchiK2ns.o
+ .debug_abbrev  0x000002de       0xe2 /var/folders/fl/1cf7cws12wxbynxcdlg3dkv80000gn/T//ccpryMr7.o
+ .debug_abbrev  0x000003c0       0xb3 /var/folders/fl/1cf7cws12wxbynxcdlg3dkv80000gn/T//ccZZuBCA.o
+ .debug_abbrev  0x00000473      0x135 /var/folders/fl/1cf7cws12wxbynxcdlg3dkv80000gn/T//ccEbHjq2.o
+
+.debug_aranges  0x00000000       0xc0
+ .debug_aranges
+                0x00000000       0x20 /var/folders/fl/1cf7cws12wxbynxcdlg3dkv80000gn/T//ccSVdeat.o
+ .debug_aranges
+                0x00000020       0x20 /var/folders/fl/1cf7cws12wxbynxcdlg3dkv80000gn/T//ccm81kvX.o
+ .debug_aranges
+                0x00000040       0x20 /var/folders/fl/1cf7cws12wxbynxcdlg3dkv80000gn/T//cchiK2ns.o
+ .debug_aranges
+                0x00000060       0x20 /var/folders/fl/1cf7cws12wxbynxcdlg3dkv80000gn/T//ccpryMr7.o
+ .debug_aranges
+                0x00000080       0x20 /var/folders/fl/1cf7cws12wxbynxcdlg3dkv80000gn/T//ccZZuBCA.o
+ .debug_aranges
+                0x000000a0       0x20 /var/folders/fl/1cf7cws12wxbynxcdlg3dkv80000gn/T//ccEbHjq2.o
+
+.debug_str      0x00000000      0x338
+ .debug_str     0x00000000      0x338 /var/folders/fl/1cf7cws12wxbynxcdlg3dkv80000gn/T//ccSVdeat.o
+                                 0x46 (size before relaxing)
+ .debug_str     0x00000338        0x0 /var/folders/fl/1cf7cws12wxbynxcdlg3dkv80000gn/T//ccm81kvX.o
+                                0x276 (size before relaxing)
+ .debug_str     0x00000338        0x0 /var/folders/fl/1cf7cws12wxbynxcdlg3dkv80000gn/T//cchiK2ns.o
+                                0x17b (size before relaxing)
+ .debug_str     0x00000338        0x0 /var/folders/fl/1cf7cws12wxbynxcdlg3dkv80000gn/T//ccpryMr7.o
+                                0x186 (size before relaxing)
+ .debug_str     0x00000338        0x0 /var/folders/fl/1cf7cws12wxbynxcdlg3dkv80000gn/T//ccZZuBCA.o
+                                0x176 (size before relaxing)
+ .debug_str     0x00000338        0x0 /var/folders/fl/1cf7cws12wxbynxcdlg3dkv80000gn/T//ccEbHjq2.o
+                                0x1ca (size before relaxing)
+
+.debug_frame    0x00000000      0x454
+ .debug_frame   0x00000000      0x1c0 /var/folders/fl/1cf7cws12wxbynxcdlg3dkv80000gn/T//ccm81kvX.o
+ .debug_frame   0x000001c0       0xc0 /var/folders/fl/1cf7cws12wxbynxcdlg3dkv80000gn/T//cchiK2ns.o
+ .debug_frame   0x00000280       0x9c /var/folders/fl/1cf7cws12wxbynxcdlg3dkv80000gn/T//ccpryMr7.o
+ .debug_frame   0x0000031c       0xa0 /var/folders/fl/1cf7cws12wxbynxcdlg3dkv80000gn/T//ccZZuBCA.o
+ .debug_frame   0x000003bc       0x98 /var/folders/fl/1cf7cws12wxbynxcdlg3dkv80000gn/T//ccEbHjq2.o

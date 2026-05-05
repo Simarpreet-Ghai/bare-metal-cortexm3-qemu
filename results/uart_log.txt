@@ -1,0 +1,31 @@
+Hello from Cortex-M3
+UART is working
+Tick
+Tick
+Tick
+Command demo:
+> help
+Commands:
+  help              show this list
+  tick              print current SysTick ms count
+  info              print board and memory info
+  memread <addr>    read a 32-bit address, example 0xE000E010
+  blink <n>         toggle GPIO n times
+  reboot/reset      placeholder reset command
+> info
+Board: QEMU mps2-an385
+CPU: ARM Cortex-M3
+FLASH: 0x00000000, 512 KB
+SRAM:  0x20000000, 32 KB
+Clock used for UART/SysTick: 24000000 Hz
+> tick
+tick=<current ms> ms
+> memread 0xE000E010
+0xe000e010: 0x10007
+> blink 2
+Blinking GPIO 2 times
+Done
+> reset
+Reset is not implemented in this guide project.
+Interactive shell ready. Type 'help'.
+> 
